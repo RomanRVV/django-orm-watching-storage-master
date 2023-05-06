@@ -9,7 +9,8 @@ node_modules
 output
 
 
-/.idea
+.idea
+
 poetry.lock
 pyproject.toml
 .replit

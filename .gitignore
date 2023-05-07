@@ -16,3 +16,5 @@ pyproject.toml
 .replit
 .gitattributes
 .env
+
+__pycache__

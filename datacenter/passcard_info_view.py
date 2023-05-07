@@ -9,7 +9,6 @@ def passcard_info_view(request, passcode):
     passcard = get_object_or_404(Passcard.objects, passcode=passcode)
     this_passcard_visits = []
     for visit in Visit.objects.filter(passcard=passcard):
-        print(format_duration(get_duration(visit)))
         this_passcard_visits.append(
             {
                 'entered_at': timezone.localtime(visit.entered_at),

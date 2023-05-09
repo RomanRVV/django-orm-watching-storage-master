@@ -1,17 +1,25 @@
 import os
-from dotenv import load_dotenv, find_dotenv
+from environs import Env
 
-load_dotenv(find_dotenv())
-user = os.environ['USER']
-password = os.environ['PASSWORD']
-secret_key = os.environ['SECRET_KEY']
+
+env = Env()
+env.read_env()
+
+
+user = env('USER')
+password = env('PASSWORD')
+secret_key = env('SECRET_KEY')
+engine = env('ENGINE')
+host = env('HOST')
+port = env('PORT')
+name = env('NAME')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'checkpoint.devman.org',
-        'PORT': '5434',
-        'NAME': 'checkpoint',
+        'ENGINE': engine,
+        'HOST': host,
+        'PORT': port,
+        'NAME': name,
         'USER': user,
         'PASSWORD': password,
     }
@@ -21,7 +29,7 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = secret_key
 
-DEBUG = True
+DEBUG = env.bool('DEBUG', 'False')
 
 ROOT_URLCONF = 'project.urls'
 

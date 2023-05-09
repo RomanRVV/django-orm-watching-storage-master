@@ -18,3 +18,7 @@ pyproject.toml
 .env
 
 __pycache__
+
+venv
+
+.vscode

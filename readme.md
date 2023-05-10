@@ -13,13 +13,14 @@
 
 Создайте файл .env и вставьте в него секретный ключ, а также данные для получения доступа к базе данных.
 
-`SECRET_KEY = 213123213`
-`PASSWORD = osim1`
-`USER = guardss`
-`ENGINE = django.db.backends.postgresql_psycopg`
-`HOST = checkpoint.devman.ru`
-`PORT = 0000`
-`NAME = cheKkpoint`
+- `SECRET_KEY = 213123213`
+- `PASSWORD = osim1`
+- `USER = guardss`
+- `ENGINE = django.db.backends.postgresql_psycopg`
+- `HOST = checkpoint.devman.ru`
+- `PORT = 0000`
+- `NAME = cheKkpoint`
+
 (Пример того, что должно быть в файле .env )
 
 В .env можно включить или отключить DEBUG вписав его в файл(по умолчанию стоит False)

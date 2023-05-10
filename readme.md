@@ -14,12 +14,7 @@
 Создайте файл .env и вставьте в него секретный ключ, а также данные для получения доступа к базе данных.
 
 - `SECRET_KEY = 213123213`
-- `PASSWORD = osim1`
-- `USER = guardss`
-- `ENGINE = django.db.backends.postgresql_psycopg`
-- `HOST = checkpoint.devman.ru`
-- `PORT = 0000`
-- `NAME = cheKkpoint`
+- `DATABASE_URL = postgres://USER:PASSWORD@HOST:PORT/NAME`
 
 (Пример того, что должно быть в файле .env )
 

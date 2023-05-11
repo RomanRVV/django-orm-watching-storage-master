@@ -20,8 +20,9 @@ DEBUG = env.bool('DEBUG', False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', '.localhost')
+allowed_hosts_default = ['[::1]', '.localhost', '127.0.0.1']
 
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', allowed_hosts_default)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES = [
